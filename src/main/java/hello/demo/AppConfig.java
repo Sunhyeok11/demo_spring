@@ -7,7 +7,6 @@ import hello.demo.member.MemberService;
 import hello.demo.member.MemberServiceImpl;
 import hello.demo.member.MemoryMemberRepository;
 import hello.demo.order.OrderService;
-import hello.demo.order.OrderServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -30,7 +29,8 @@ public class AppConfig {
     @Bean
     public OrderService orderService() {
         System.out.println("call AppConfig.orderService");
-        return new OrderServiceImpl(memberRepository(), discountPolicy());
+        //return new OrderServiceImpl(memberRepository(), discountPolicy());
+        return null;
     }
 
     @Bean
